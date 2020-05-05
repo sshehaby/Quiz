@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
+<!-- Author : Dr. Saleh S. el Shehaby -->
+
 <head>
   <meta charset="utf-8">
-  <title>jsTree test</title>
+  <title>Binary Search Tree Quiz</title>
   <!-- 2 load the theme CSS file -->
 
   
 </head>
 
 <body>
-  <div id="GFG" style="background-color: #00e6e6;"> 
+  <div id="GFG" style="background-color: #a8f0bf;"> 
         <p> 
             ...<br>
 			...<br> 
@@ -19,24 +21,26 @@
   <h1>Binary Tree</h1>
   <div class='input-box'>
     <input id='student-id' type='number' placeholder='Enter your ID'>
-    <button id='create-tree' onclick="createShowTree()">Student Id</button>
+    <button id='create-tree' style="background-color: #a8f0bf;" onclick="createShowTree()">Student Id</button>
   </div>
-  <h2>Send e-mail to shehaby@alexu.edu.eg:</h2>
+  <h2>Send answer to e-mail shehaby@alexu.edu.eg</h2>
 
-<form action="mailto:shehaby@alexu.edu.eg?subject=Testing out mailto!" method="post" enctype="text/plain">
+<form action="mailto:shehaby@alexu.edu.eg?subject=Quiz!" method="post" enctype="text/plain">
 Name:<br>
 <input type="text" name="name"><br>
 E-mail:<br>
 <input type="text" name="mail"><br>
-Comment:<br>
-<input type="text" name="comment" size="50"><br><br>
+Answer :<br>
+<textarea id="answer" style="background-color: #edf0ee;", rows = "10" cols = "100" name = "Answer" disabled>
 
-<input type="submit" value="Send">
-<input type="reset" value="Reset">
+         </textarea><br><br><br>
+
+<input id='submit' type="submit" value="Send" "background-color: #edf0ee;" disabled>
+<input id='reset' type="reset" value="Reset" "background-color: #edf0ee;" disabled>
 </form>
   <div class="tree center">
     <canvas id='my-canvas' width="1000" height="800">
-      Your browser doesnot support canvas
+      Your browser does not support canvas
 	  <script src="./bstQuestion.js"></script>
     </canvas>
   </div>

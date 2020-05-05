@@ -1,5 +1,5 @@
-// Authors: Sami Mamdouh
-//          Saleh el Shehaby
+// Authors:  
+//          Dr. Saleh S. el Shehaby
 /////////////////// my Main
 var createShowTree = function() {
 
@@ -15,14 +15,33 @@ var createShowTree = function() {
   var me=genArray(parseInt(input.value),10);
   
   //alert(me);
-  const button = document.getElementById('create-tree');
+  button = document.getElementById('create-tree');
+  button.style.background='#fcfcfc';
   button.disabled = true;
    str="Draw a BST with the following elements inserted in that order:\n";
    str+='...............'+me.toString()+'\n'
-   str+='then submit the inOrder, preOrder and postOrder Traversals output';
+   str+='then write the inOrder, preOrder and postOrder Traversals output\n';
+   str+='...............then delete in '+me[0].toString()+' then '+me[1].toString()+' in that order,\n';
+   str+='and rewrite the inOrder, preOrder and postOrder Traversals output';
    st=str+"\n";
    document.getElementById("GFG").innerText = st;
    //readTextFile();
+  
+  button=document.getElementById('answer');
+  button.style.background='#a8f0bf' ;
+  button.disabled  = false;
+  str="Array : "+me.toString()+'\n';
+  str+='inOrder:\npreOrder:\npostOrder:\n';
+  str+='.........after deletion of '+me[0].toString()+' then '+me[1].toString()+'\n';
+  str+='inOrder:\npreOrder:\npostOrder:\n';
+  button.value=str
+  
+  button = document.getElementById('submit');
+  button.style.background='#a8f0bf';
+  button.disabled = false;
+  button = document.getElementById('reset');
+  button.style.background='#a8f0bf';
+  button.disabled = false;
    }
 
 
