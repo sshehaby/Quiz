@@ -20,14 +20,15 @@
     </div> 
   <h1>Binary Tree</h1>
   <div class='input-box'>
-    <input id='student-id' type='number' placeholder='Enter your ID'>
+    <input id='student-id' type='password' placeholder='Enter your ID'>
+	<input type="checkbox" onclick="xorID()">Show ID
     <button id='create-tree' style="background-color: #a8f0bf;" onclick="createShowTree()">Student Id</button>
   </div>
   <h2>Send answer to e-mail shehaby@alexu.edu.eg</h2>
 
-<form action="mailto:shehaby@alexu.edu.eg?subject=Quiz!" method="post" enctype="text/plain">
+<form action="mailto:shehaby@gmail.com?subject=Quiz!" method="post" enctype="text/plain">
 Name:<br>
-<input type="text" name="name"><br>
+<input id = "name" type="text" name="name" disabled><br>
 E-mail:<br>
 <input type="text" name="mail"><br>
 Answer :<br>
