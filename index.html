@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
 <html>
 <!-- Author : Dr. Saleh S. el Shehaby -->
 
@@ -25,8 +27,10 @@
     <button id='create-tree' style="background-color: #a8f0bf;" onclick="createShowTree()">Student Id</button>
   </div>
   <h2>Send answer to e-mail shehaby@alexu.edu.eg</h2>
+  
+<form id="myForm" action="mailto:shehaby@gmail.com?subject=Quiz: Name " method="post" enctype="text/plain">
 
-<form action="mailto:shehaby@gmail.com?subject=Quiz!" method="post" enctype="text/plain">
+<!-- <form>-->
 Name:<br>
 <input id = "name" type="text" name="name" disabled><br>
 E-mail:<br>
@@ -35,7 +39,9 @@ Answer :<br>
 <textarea id="answer" style="background-color: #edf0ee;", rows = "10" cols = "100" name = "Answer" disabled>
 
          </textarea><br><br><br>
-
+<!-- 
+<input id='submit' onclick="sendEmail()" type="submit" value="Send" "background-color: #edf0ee;" disabled>
+-->
 <input id='submit' type="submit" value="Send" "background-color: #edf0ee;" disabled>
 <input id='reset' type="reset" value="Reset" "background-color: #edf0ee;" disabled>
 </form>
