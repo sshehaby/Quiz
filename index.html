@@ -6,7 +6,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Binary Search Tree Quiz</title>
+  <title>Binary Search Tree Quiz (js)</title>
   <!-- 2 load the theme CSS file -->
 
   
@@ -24,9 +24,9 @@
   <div class='input-box'>
     <input id='student-id' type='password' placeholder='Enter your ID'>
 	<input type="checkbox" onclick="xorID()">Show ID
-    <button id='create-tree' style="background-color: #a8f0bf;" onclick="createShowTree()">Student Id</button>
+    <button id='create-tree'  style="background-color: #a8f0bf; font-size:20px;" onclick="createShowTree()">Student Id</button>
   </div>
-  <h2>Send answer to e-mail shehaby@alexu.edu.eg</h2>
+  <h2>[Send] answer via e-mail / or [Link to Form]</h2>
   
 <form id="myForm" action="mailto:shehaby@gmail.com?subject=Quiz: Name " method="post" enctype="text/plain">
 
@@ -36,7 +36,7 @@ Name:<br>
 E-mail:<br>
 <input type="text" name="mail"><br>
 Answer :<br>
-<textarea id="answer" style="background-color: #edf0ee;", rows = "10" cols = "100" name = "Answer" disabled>
+<textarea id="answer" font-size:16px style="background-color: #edf0ee;", rows = "8" cols = "100" name = "Answer" disabled>
 
          </textarea><br><br><br>
 <!-- 
@@ -44,6 +44,9 @@ Answer :<br>
 -->
 <input id='submit' type="submit" value="Send" "background-color: #edf0ee;" disabled>
 <input id='reset' type="reset" value="Reset" "background-color: #edf0ee;" disabled>
+<div id="showmap" style="display:none;">
+	<a href="/" id="abc" target="_blank">Link To Form </a>
+</div>
 </form>
   <div class="tree center">
     <canvas id='my-canvas' width="1000" height="800">

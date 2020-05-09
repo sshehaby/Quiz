@@ -3,13 +3,14 @@
 /////////////////// my Main
 var createShowTree = function() {
   document.getElementById('submit').addEventListener("click", sendEmail);
-   var canvas = document.getElementById('my-canvas');
+   /*var canvas = document.getElementById('my-canvas');
    var context = canvas.getContext('2d');
    var w = canvas.width;
    var h = canvas.height;
    context.fillStyle = 'rgba(255, 255, 230, 1)';
    context.fillRect(0, 0, w, h);
    context.beginPath();
+   context.font ="bold 20px Courier New";*/
   input = document.getElementById('student-id');
   if (isNaN(parseInt(input.value))) {alert('Enter Your Id');return;}
   name=getName(parseInt(input.value));
@@ -19,8 +20,10 @@ var createShowTree = function() {
   
   //alert(me);
   button = document.getElementById('create-tree');
-  button.style.background='#fcfcfc';
+  button.style.background='#fcfcfc';button.style.fontSize="x-small";
   button.disabled = true;
+  
+  document.getElementById("name").style.fontSize = "20px";
   document.getElementById("name").value = name;
    str="Draw a BST with the following elements inserted in that order:\n";
    str+='...............'+me.toString()+'\n'
@@ -28,23 +31,28 @@ var createShowTree = function() {
    str+='...............then delete in '+me[0].toString()+' then '+me[1].toString()+' in that order,\n';
    str+='and rewrite the inOrder, preOrder and postOrder Traversals output';
    st=str+"\n";
+   document.getElementById("GFG").style.fontSize = "20px";
    document.getElementById("GFG").innerText = st;
    //readTextFile();
   
   button=document.getElementById('answer');
+  button.style.fontSize = "18px";
   button.style.background='#a8f0bf' ;
   button.disabled  = false;
   str="Array : "+me.toString()+'\n';
   str+='inOrder:\npreOrder:\npostOrder:\n';
   str+='.........after deletion of '+me[0].toString()+' then '+me[1].toString()+'\n';
-  str+='inOrder:\npreOrder:\npostOrder:\n';
+  str+='inOrder:\npreOrder:\npostOrder:';
   button.value=str
   
   button = document.getElementById('submit');
-  button.style.background='#a8f0bf';
+  button.style.background='#a8f0bf';button.style.fontSize="large";
   button.disabled = false;
+  document.getElementById("showmap").style.display = "block";
+  var link =document.getElementById("abc");
+  link.setAttribute("href"," https://docs.google.com/forms/d/e/1FAIpQLScDZvfa0AJSoODZx463DqBBacBlW8Un8XquADPQadflDAeFWQ/viewform"); 
   button = document.getElementById('reset');
-  button.style.background='#a8f0bf';
+  button.style.background='#a8f0bf';button.style.fontSize="large";
   button.disabled = false;
    }
 
@@ -113,8 +121,11 @@ const  names=["محمد طارق فوزى حبشى","عبد الحليم محم�
    
     function sendEmail() {
 	if( !(typeof sendEmail.counter == 'undefined') ) {
-	    button = document.getElementById('submit');
-        //button.style.background='#a8f0bf';
+	    button = document.getElementById('submit');button.style.fontSize="x-small";
+        button.style.background='#edf0ee';
+        button.disabled = true;
+		button = document.getElementById('reset');button.style.fontSize="x-small";
+        button.style.background='#edf0ee';
         button.disabled = true;
         return
     }
